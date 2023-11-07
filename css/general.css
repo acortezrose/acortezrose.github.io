@@ -7,6 +7,10 @@
 	src: url("../fonts/CrimsonPro-Medium.ttf");
 }
 @font-face {
+	font-family: "Crimson Pro Medium Italic";
+	src: url("../fonts/CrimsonPro-MediumItalic.ttf");
+}
+@font-face {
 	font-family: "Crimson Pro Regular";
 	src: url("../fonts/CrimsonPro-Regular.ttf");
 }
@@ -123,6 +127,24 @@ a {
 	color: #2929FF;
 	text-decoration: none;
 	font-size:var(--open-step-1);
+}
+
+p span {
+	font-family: Crimson Pro Medium Italic;
+	margin-right:4px;
+}
+
+p a {
+	margin: 0;
+	padding:0;
+	color: #181D24;
+	font-family: Crimson Pro Medium;
+	font-size:var(--step-0);
+	line-height: 117%;
+	font-style: normal;
+	font-weight: 500;
+	margin-bottom: 4%;
+	border-bottom: solid 2px #181D24;
 }
 
 a:hover {
