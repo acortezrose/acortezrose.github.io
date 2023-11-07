@@ -18,18 +18,19 @@
     <a href="about.html">About</a>
   </nav> 
 
-  <section class="header">
+  <section class="header tag">
     <div>
     <h1 class="title">Alexandra Rose&nbsp;Cortez</h1>
     <p class="subtitle">user experience and&nbsp;user interface&nbsp;designer</p>
   </div>
   </section>
+  <hr>
   <section class="case-study">
     <div class="hero">
-      <h2>Streamlining Order Fulfillment</h2>
-      <img class="cover-image" src="./img/alexandra-cortez-streamlining-order-fulfillment-ux-design.png" width="653" height="674" alt="A cropped user journey map covered by a fulfillment center homepage design">
+      <h2 class="scale delay">Streamlining Order Fulfillment</h2>
+      <img class="cover-image scale" src="./img/alexandra-cortez-streamlining-order-fulfillment-ux-design.png" width="653" height="674" alt="A cropped user journey map covered by a fulfillment center homepage design">
     </div>
-    <div class="details">
+    <div class="details tag delay">
       <div class="tools">
         <h3>Tools</h3> 
         <hr>
@@ -59,12 +60,13 @@
       </div>
     </div>
   </section>
+  <hr>
   <section class="case-study swap">
     <div class="hero">
-      <h2>Designing for Knowledge&nbsp;Sharing</h2>
-      <img class="cover-image" src="./img/alexandra-cortez-desigining-for-knowledge-sharing-ux.png" width="653" height="674" alt="A cropped user journey map covered by a fulfillment center homepage design">
+      <h2 class="scale delay">Designing for Knowledge&nbsp;Sharing</h2>
+      <img class="cover-image scale" src="./img/alexandra-cortez-desigining-for-knowledge-sharing-ux.png" width="653" height="674" alt="A cropped user journey map covered by a fulfillment center homepage design">
     </div>
-    <div class="details">
+    <div class="details tag delay">
       <div class="tools">
         <h3>Tools</h3> 
         <hr>
@@ -94,19 +96,21 @@
       </div>
     </div>
   </section>
+  <hr>
   <div class="gray">
     <section class="case-study">
         <div>
-      <h2 style="max-width:639px">Turning Twitter’s Privacy Policy into Music</h2>
-      <a class="button" href="https://www.youtube.com/watch?v=za7Zv9oMWkI" target="_blank">Listen to a Privacy Policy</a>
+      <h2 class="scale delay" style="max-width:639px">Turning Twitter’s Privacy Policy into Music</h2>
+      <a class="button scale delay" href="https://www.youtube.com/watch?v=za7Zv9oMWkI" target="_blank">Listen to a Privacy Policy</a>
     </div>
-      <div>
+      <div class="tag delay">
         <p><span class="date">March 10, 2020 — </span>Recently, I’ve been listening to ambient music from morning to night. For a few moments, instead of sitting at home under a harsh reading light, infiltrated with the distant clanging of pots and pans, I can be somewhere else entirely—standing in an endless haze of tall grass, listening to a synthesized swell of soft&nbsp;rain.</p>
         <p>I was playing <a href="https://www.youtube.com/watch?v=Z3m7HXeiHpg" target="_blank"><span>Wet Land</span> by Hiroshi Yoshimura</a> as I read assignment descriptions for my privacy class. One titled Privacy Art simply stated, “Produce a piece of privacy-related art and write a reflection on your&nbsp;piece.” </p>
         <p>I thought about the different records I’d been listening to and how they portrayed information through sound. <a href="https://www.youtube.com/watch?v=qp-n5Ap0d90" target="_blank">Michael Siegel’s <span>The Sounds of the Office</span></a> creates an archive of office sounds in their ordinary environment: coffee breaks, letter opening, typing. While sespaningly mundane, this soundscape paints a precise picture of the ecosystspan of a single office as it existed in 1964—complete with dictating machines and typewriters. NASA’s <span>Symphonies of the Planets</span> drones and swirls on, endlessly re-imagining our solar systspan’s planets through Voyager data. If these ideas could be manifested as music, then privacy should be able to as well, I&nbsp;thought.</p>
       </div>
     </section>
   </div>
+  <hr>
   <footer>
       <div>
       <a href="about.html">About</a>
@@ -117,3 +121,49 @@
   </footer>
 </body>
 </html>
+
+<script>
+   $(window).load(function(){
+    var header = $(".header");
+    header.addClass("visible");
+  });
+
+  $(document).on("scroll", function() {
+  var pageTop = $(document).scrollTop();
+  var pageBottom = pageTop + $(window).height();
+  var tags = $(".tag");
+  var scales = $(".scale");
+
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i];
+
+    if (isInViewport(tag)) {
+      $(tag).addClass("visible");
+    } else {
+      $(tag).removeClass("visible");
+    }
+  }
+
+  for (var i = 0; i < scales.length; i++) {
+    var scale = scales[i];
+
+    if (isInViewport(scale)) {
+      $(scale).addClass("visible");
+    } else {
+      $(scale).removeClass("visible");
+    }
+  }
+});
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect(); 
+    var horizPadding = (rect.right - rect.left) / 1.75;
+    var verticalPadding = (rect.bottom - rect.top) / 1.75;
+    return (
+        (rect.top + verticalPadding) >= 0 &&
+        (rect.left + verticalPadding)  >= 0 &&
+        (rect.bottom - horizPadding) <= (window.innerHeight || document.documentElement.clientHeight) &&
+        (rect.right - horizPadding) <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+</script>

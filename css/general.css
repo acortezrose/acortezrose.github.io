@@ -127,6 +127,7 @@ a {
 	color: #2929FF;
 	text-decoration: none;
 	font-size:var(--open-step-1);
+	transition: all ease-in 100ms;
 }
 
 p span {
@@ -142,7 +143,7 @@ a:hover {
 a.button {
 	display:block;
 	width:fit-content;
-	margin-top:32px;
+	margin-top:var(--open-step-3);
 	background-color: white;
 	color: #E8AC02;
 	padding: 10px 18px;
@@ -163,6 +164,12 @@ p a {
 	font-weight: 500;
 	margin-bottom: 4%;
 	border-bottom: solid 2px #181D24;
+	transition: all ease-in 100ms;
+}
+
+p a:hover {
+	color: #E8AC02;
+	border-color: #E8AC02;
 }
 
 nav {
@@ -211,6 +218,18 @@ img {width:100%;height:auto}
 
 /* HOME HEADER LAYOUT */
 
+section {
+	max-width: 1800px;
+	margin: auto;
+}
+
+hr {
+	border: none;
+	border-top: solid 2px #E4E9EE;
+	margin: 0;
+	padding: 0;
+}
+
 section.header{
 	min-height: 85vh;
 	display: flex;
@@ -223,6 +242,8 @@ section.header div {
 	flex-flow: row nowrap;
 	align-items: last baseline;
 	gap: 24px;
+	justify-content: space-between;
+	width: 100%;
 }
 
 /* HOME CASE STUDY LAYOUT */
@@ -230,30 +251,18 @@ section.header div {
 section.case-study {
 	display: grid;
 	grid-template-columns: fit-content(56%) 1fr;
-	padding:40px 0 28px 0;
-	border-top: solid 2px #E4E9EE;
-	margin: 24px 34px;
+	padding:40px 34px 28px 34px;
 	gap: 24px;
 }
 
 .gray {
 	background-color: #F7F8FA;
-	border-top: solid 2px #E4E9EE;
 }
 
 .gray section.case-study {
 	border-top:none;
 	margin-bottom:0;
 }
-
-/*section.case-study .hero,
-section.case-study .details {
-	margin: 24px 34px;
-}*/
-
-
-
-
 
 .tool-item{
 	display:grid;
@@ -279,12 +288,12 @@ font-size:var(--open-step-0);
 
 section.case-study .hero {
 	position:relative;
-	max-width: 740px;
 }
 
 section.case-study .hero h2 {
 	position:absolute;
 	top:40px;
+	z-index: 1;
 }
 
 section.case-study .tools hr {
@@ -317,9 +326,6 @@ section.case-study .details .wording p {
 	margin-bottom:24px;
 }
 
-/*img.cover-image {max-width:653px}*/
-
-
 @media all and (min-width:992px){
 	section.case-study.swap {
 		display: grid;
@@ -332,6 +338,7 @@ section.case-study .details .wording p {
 
 	section.case-study.swap h2{
 		text-align:right;
+		right: 0;
 	}
 
 	section.case-study.swap h2::after{
@@ -366,14 +373,15 @@ section.case-study .details .wording p {
 	}
 	section.case-study, section.case-study.swap {
 		grid-template-columns: 1fr;
+		gap: 16px;
 	}
 
 	section.case-study .hero, img.cover-image {
 		max-width: none;
 	}
 
-	section.case-study > div {
-		padding: 8px 16px;
+	section.case-study {
+		padding: 40px 16px;
 		margin: 0;
 	}
 	section.case-study .details {
@@ -381,7 +389,7 @@ section.case-study .details .wording p {
 	}
 
 	section.case-study .details .wording {
-		margin-top:24px;
+		margin-top:34px;
 	}
 
 }
@@ -483,4 +491,63 @@ div.yellow-back > div > div {
 /*----- UTILITY --------*/
 .no-border {
 	border:none !important;
+}
+
+.tag {
+  opacity: 0;
+/*   transition: opacity 500ms ease-in, transform 300ms ease-in; */
+}
+
+.tag.delay {
+/* 	transition: opacity 1s ease-in; */
+/* 	transition-delay: 1000ms; */
+}
+
+.tag:not(.visible) {
+  opacity: 0;
+/*   transform: scale(.85) translate(0, 1vh); */
+  animation: fadeIn 1s ease-in reverse;
+}
+
+.tag.visible {
+  opacity: 1;
+/*   transform: scale(1) translate(0, 0); */
+  animation: fadeIn 900ms ease-in;
+}
+
+.tag.visible.delay {
+  transition-delay: 1.2s;
+  transition: opacity 500ms ease-in;
+}
+
+.scale:not(.visible) {
+  animation: fadeIn 900ms ease-in reverse, scaleUp 300ms ease-in reverse;
+  transition: transform 500ms, opacity 300ms;
+	transform: scale(.85) translate(0, 1vh); 
+	opacity: 0;
+}
+
+.tag.delay:not(.visible) {
+  animation: fadeIn 900ms ease-in reverse;
+  transition: opacity 300ms;
+	opacity: 0;
+}
+
+.scale.visible {
+	z-index: -1;
+	animation: fadeIn 900ms ease-in, scaleUp 300ms ease-in;
+	transition: transform 500ms, opacity 300ms;
+	transform: scale(1) translate(0, 0); 
+	opacity: 1;
+}
+
+@keyframes fadeIn {
+  0%   {opacity: 0;}
+  80%  {opacity: .5;}
+  100% {opacity: 1;}
+}
+
+@keyframes scaleUp {
+	0% {transform: scale(.85) translate(0, 1vh);}
+	100% {transform: scale(1) translate(0, 0);}
 }
