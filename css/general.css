@@ -142,7 +142,8 @@ a {
 }
 
 a img {
-    width: var(--step-0);
+    width: var(--step-0) !important;
+    max-width: 32px;
     vertical-align: middle;
     text-decoration: none !important;
     transition: all 100ms ease-in-out;
