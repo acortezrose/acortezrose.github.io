@@ -30,10 +30,10 @@
   </section>
   <section class="case-study">
     <div class="hero">
-      <h2>Streamlining Order Fulfillment</h2>
-      <img class="cover-image" src="./img/alexandra-cortez-streamlining-order-fulfillment-ux-design.png" width="653" height="674" alt="A cropped user journey map covered by a fulfillment center homepage design">
+      <h2 class="scale delay">Streamlining Order Fulfillment</h2>
+      <img class="cover-image scale" src="./img/alexandra-cortez-streamlining-order-fulfillment-ux-design.png" width="653" height="674" alt="A cropped user journey map covered by a fulfillment center homepage design">
     </div>
-    <div class="details">
+    <div class="details tag delay">
       <div class="tools">
         <div>
           <div class="tool-item">
@@ -63,10 +63,10 @@
   </section>
   <section class="case-study swap">
     <div class="hero">
-      <h2>Designing for Knowledge&nbsp;Sharing</h2>
-      <img class="cover-image" src="./img/alexandra-cortez-desigining-for-knowledge-sharing-ux.png" width="653" height="674" alt="A cropped user journey map covered by a fulfillment center homepage design">
+      <h2 class="scale delay">Designing for Knowledge&nbsp;Sharing</h2>
+      <img class="cover-image scale" src="./img/alexandra-cortez-desigining-for-knowledge-sharing-ux.png" width="653" height="674" alt="A cropped user journey map covered by a fulfillment center homepage design">
     </div>
-    <div class="details">
+    <div class="details tag delay">
       <div class="tools">
         <div>
           <div class="tool-item">
@@ -116,3 +116,50 @@
   </footer>
 </body>
 </html>
+
+<script>
+$(window).load(function() {
+    var header = $(".header");
+    header.addClass("visible");
+});
+
+$(document).on("scroll", function() {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+    var tags = $(".tag");
+    var scales = $(".scale");
+
+    for (var i = 0; i < tags.length; i++) {
+        var tag = tags[i];
+
+        if (isInViewport(tag)) {
+            $(tag).addClass("visible");
+        } else {
+            $(tag).removeClass("visible");
+        }
+    }
+
+    for (var i = 0; i < scales.length; i++) {
+        var scale = scales[i];
+
+        if (isInViewport(scale)) {
+            $(scale).addClass("visible");
+        } else {
+            $(scale).removeClass("visible");
+        }
+    }
+});
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    var horizPadding = (rect.right - rect.left) / 1.75;
+    var verticalPadding = (rect.bottom - rect.top) / 1.75;
+
+    return (
+        (rect.top + verticalPadding) >= 0 &&
+        (rect.left + verticalPadding) >= 0 &&
+        (rect.bottom - horizPadding) <= (window.innerHeight || document.documentElement.clientHeight) &&
+        (rect.right - horizPadding) <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+</script>
