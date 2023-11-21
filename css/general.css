@@ -291,10 +291,12 @@ section.case-study.single-col {
 	margin-bottom:0;
 }
 
-/*section.case-study .hero,
-section.case-study .details {
-	margin: 24px 34px;
-}*/
+.btn-group {
+	display:flex;
+	gap:var(--title-step-0);
+	justify-content: center;
+	padding-top: var(--open-step-2);
+}
 
 
 
@@ -474,8 +476,17 @@ footer a {
 	padding-bottom:var(--open-step-4);
 	text-align:left !important;
 }
+
+.about section {
+	padding-top:40px;
+	padding-bottom: 40px;
+}
 .about section.case-study {
 	gap:34px;
+}
+
+.about section {
+	margin: 24px 34px;
 }
 
 .about .yellow-back {
