@@ -398,9 +398,22 @@ section.case-study .details .wording p {
 }
 }
 @media all and (max-width:991px){
+	.btn-group {
+	flex-flow:column;
+	gap: var(--open-step-2);
+	align-items: center;
+}
+
+section.case-study .details {
+	margin:0 16px;
+}
+
 	section.case-study {
 			padding: var(--title-step-0) 0 var(--title-step-0) 0;
 
+	}
+	.about section.case-study .hero {
+		padding: 0;
 	}
 	section, section.case-study {
 		max-width: 767px;
@@ -415,6 +428,7 @@ section.case-study .details .wording p {
 	}
 	section.case-study.single-col {
 		max-width: 767px;
+		margin: 0 16px;
 	}
 	h1.title {
 		font-size:calc(100vw*.15);
@@ -488,6 +502,10 @@ footer a {
 
 .about section {
 	margin: 24px 34px;
+}
+
+.about section.case-study .details {
+	margin:0;
 }
 
 .about .yellow-back {
