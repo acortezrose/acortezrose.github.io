@@ -272,7 +272,7 @@ section.header > div {
 }
 
 .background-plus {
-	background-image: url("../img/plus.png");
+	background-image: url("../img/plus.svg");
 	background-repeat: round;
 	width:100%;
 }
