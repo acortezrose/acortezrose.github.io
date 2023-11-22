@@ -2,6 +2,7 @@ body {
 	background-image: url("../img/plus-swirl.svg");
 	background-repeat: repeat-y;
 	background-blend-mode: overlay;
+	background-position-y: 30px;
 	padding: 0 34px;
 }
 
