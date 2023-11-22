@@ -1,0 +1,57 @@
+body {
+	background-image: url("../img/plus-swirl.png");
+	background-repeat: repeat-y;
+	background-blend-mode: overlay;
+	padding: 0 34px;
+}
+
+h1.title {
+	font-size: var(--step-5);
+	line-height: 90%;
+	margin-top: var(--step-5);
+	margin-bottom: var(--step-2);
+}
+
+h2, p {max-width:650px; margin-left: auto; margin-right:auto}
+
+h2 {
+	margin-bottom: var(--open-step-3);
+	margin-top: var(--title-step--2);
+}
+
+figure, iframe {
+	max-width: 991px;
+	padding: var(--open-step-4) 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+iframe {
+	aspect-ratio: 16 / 9;
+}
+
+figcaption {
+	color: #70777D;
+	font-family: Open Sans;
+	font-size: var(--open-step-0);
+	margin-top: var(--open-step--2);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.75rem; /* 200% */
+}
+
+section.header {
+	padding: 0;
+}
+
+
+.title {
+	text-align: center;
+}
+
+@media all and (max-width:991px){
+	body {
+		background-repeat: no-repeat;
+	}
+
+}

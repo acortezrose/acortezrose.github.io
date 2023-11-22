@@ -155,7 +155,7 @@ a {
 
 a.icon::after {
 	content:'';
-	background-image: urL("../img/alexandra-cortez-icon-arrow.svg");
+	background-image: url("../img/alexandra-cortez-icon-arrow.svg");
 	background-repeat: round;
 	width:var(--open-step-3);
 	height:var(--open-step-3);
@@ -373,7 +373,8 @@ section.case-study .hero {
 	top:40px;
 }*/
 
-section.case-study .tools hr {
+hr {
+	width: 100%;
 	border: none;
 	border-top: solid 1px #DCDCDC;
 	margin: 16px 0;
