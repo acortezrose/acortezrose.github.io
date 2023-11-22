@@ -22,7 +22,10 @@
     <div>
       <div class="wording">
         <h1 class="title">Alexandra Rose&nbsp;Cortez</h1>
-        <p class="subtitle">user experience and&nbsp;user interface&nbsp;designer</p>
+        <p class="subtitle visible">I'm a user experience&nbsp;designer.</p>
+        <p class="subtitle">I'm a sense-maker.</p>
+        <p class="subtitle">I'm a user interface&nbsp;designer.</p>
+        <p class="subtitle">I'm a product designer.</p>
       </div>
     <div class="background-plus"></div>
   </div>
@@ -121,6 +124,7 @@
 $(window).load(function() {
     var header = $(".header");
     header.addClass("visible");
+    subtitleSlide();
 });
 
 $(document).on("scroll", function() {
@@ -161,5 +165,21 @@ function isInViewport(element) {
         (rect.bottom - horizPadding) <= (window.innerHeight || document.documentElement.clientHeight) &&
         (rect.right - horizPadding) <= (window.innerWidth || document.documentElement.clientWidth)
     );
+}
+
+function subtitleSlide(){
+  var subtitleList = $(".subtitle");
+  var showThis = 1;
+
+  setInterval(function () {
+    var last = showThis - 1;
+    if (last < 0) {
+      last = subtitleList.length - 1;
+    }
+    $(subtitleList[last]).removeClass("visible");
+    $(subtitleList[showThis]).addClass("visible");
+    showThis = (showThis + 1) % subtitleList.length;
+  }, 3500); 
+
 }
 </script>

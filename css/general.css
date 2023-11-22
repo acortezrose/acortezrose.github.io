@@ -56,7 +56,6 @@ body, h1, h2, h3, h4, h5 {
 }
 
 body, body .about {
-	background-color: white;
 	display: flex;
 	flex-flow: column;
 	align-items: center;
@@ -67,7 +66,7 @@ section {
 }
 
 section.min-height {
-	min-height: 30vh;
+	min-height: 40vh;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
@@ -278,6 +277,24 @@ section.header > div {
 	width:100%;
 }
 
+/* .before-background-plus > * {
+	position: relative;
+	z-index: 10;
+} */
+
+.before-background-plus::before {
+	content: '';
+	display: block;
+	position: absolute;
+	background-image: url("../img/plus.png");
+	background-repeat: round;
+	min-width:var( --title-step-5);
+	min-height: var( --title-step-3);
+	top: -4%;
+	left: -2%;
+	z-index: -1;
+}
+
 /* HOME CASE STUDY LAYOUT */
 
 section.case-study {
@@ -297,8 +314,9 @@ section.case-study.single-col {
 }
 
 section.case-study.single-col .content {
-	max-width: 60%;
+	max-width: 50%;
 	margin-left: auto;
+	margin-right: 34px;
 }
 
 .gray {
@@ -522,7 +540,7 @@ footer a {
 
 .about section {
 	margin: auto;
-	padding: 40px 34px;
+	padding: 80px 34px;
 }
 
 .about .yellow-back {
@@ -532,7 +550,7 @@ footer a {
 }
 
 div.yellow-back > div {
-	background-color: rgba(250, 185, 2, 0.10);
+	background-color: #F7F7FF;
 	padding: 0 34px;
 	text-align: center;
 	max-width: none;
@@ -555,7 +573,7 @@ div.yellow-back > div > div {
 	display: flex;
 	flex-flow:column;
 	gap:12px;
-	border-top: 2px solid rgba(232, 172, 2, 0.24); 
+	border-top: 2px solid #BCBCF9; 
 	padding: var(--open-step-3) var(--open-step-2);
 }
 
@@ -604,6 +622,18 @@ div.yellow-back > div > div {
 
 .tag {
     opacity: 0;
+}
+
+.subtitle:not(.visible) {
+    opacity: 0;
+    display: none;
+    animation: fadeIn 1s ease-in reverse;
+}
+
+.subtitle.visible {
+    opacity: 1;
+    display: block;
+    animation: fadeIn 900ms ease-in, moveUp 500ms ease-in;
 }
 
 .tag:not(.visible) {
@@ -663,5 +693,15 @@ div.yellow-back > div > div {
 
     100% {
         transform: scale(1) translate(0, 0);
+    }
+}
+
+@keyframes moveUp {
+	    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
     }
 }
