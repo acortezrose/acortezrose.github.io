@@ -79,11 +79,12 @@ h1, h2 {
 	font-style: normal;
 	font-weight: 800;
 	line-height: 110%;
-	letter-spacing: -0.58px;
+	letter-spacing: -1.5px;
 }
 
 h3 {
 	font-size:var(--open-step-2);
+	letter-spacing: -.5px;
 }
 
 h1.title {
@@ -93,6 +94,7 @@ h1.title {
 	line-height:78%;
 	color: #170f0f;
 	padding-bottom:8px;
+	letter-spacing: -4px;
 }
 
 section.header .wording {
@@ -117,6 +119,7 @@ p.subtitle {
 /*	font-size: 28px;*/
 /*	line-height: 36px;*/
 	font-size:var(--open-step-3);
+	letter-spacing: -.5px;
 	color: #0f0f17;
 	margin-top: var(--open-step-2);
 /*	text-align:right;*/
@@ -149,6 +152,7 @@ a {
 	color: #2929FF;
 	text-decoration: none;
 	font-size:var(--open-step-1);
+	letter-spacing: -0.35px;
 	position:relative;
 	border-bottom: solid 2px #fff0;
 }
