@@ -368,7 +368,7 @@ section.case-study {
     grid-template-columns: fit-content(56%) 1fr;
     align-items: center;
     padding: 48px 0 28px 0;
-    border-top: dashed 2px #6767DE;
+/*     border-top: dashed 2px #6767DE; */
     margin: 24px 34px;
     gap: 0;
 }
