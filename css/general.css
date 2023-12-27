@@ -286,6 +286,10 @@ img {
     display: block
 }
 
+.rounded {
+	border-radius: 20px;
+}
+
 /* HOME HEADER LAYOUT */
 
 section.header {
@@ -605,6 +609,8 @@ footer a {
 
 .about section.case-study {
     gap: 34px;
+    gap: var(--step-4);
+    grid-template-columns: 1fr fit-content(56%);
 }
 
 .about section {
@@ -630,11 +636,17 @@ div.yellow-back>div>div {
     margin: auto;
 }
 
+.about section.case-study .details {
+	background: none;
+	padding: 0;
+}
+
 .about .information {
     text-align: left;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--open-step-0) var(--open-step-5);
+    margin-top: var(--step-3);
 }
 
 .about .information .info-item {
@@ -673,6 +685,10 @@ div.yellow-back>div>div {
         align-items: center;
         display: flex;
         flex-flow: column;
+    }
+
+    .about section.case-study  {
+    	grid-template-columns: 1fr;
     }
 
     .about section.case-study .details {
