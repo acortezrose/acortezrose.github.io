@@ -481,11 +481,11 @@ section.case-study .details .wording p {
 }
 }
 
-@media all and (min-width:1536px) {
+/* @media all and (min-width:1536px) {
     .tools>div {
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
+} */
 
 @media all and (max-width:991px) {
 	section.introduction {
