@@ -444,9 +444,11 @@ section.case-study .hero {
 
 hr {
     width: 100%;
+    margin: var(--step-2) 0 var(--step--2) 0;
+    height: 3px;
+    background-image: linear-gradient(90deg, #6767DE, #6767DE 50%, transparent 50%, transparent 100%);
+    background-size: 6px 10px;
     border: none;
-    border-top: solid 1px #DCDCDC;
-    margin: 16px 0;
 }
 
 section.case-study .details {
