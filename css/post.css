@@ -11,9 +11,10 @@ h1.title {
 	line-height: 90%;
 	margin-top: var(--step-5);
 	margin-bottom: var(--step-2);
+	letter-spacing: calc(-.04 * (var(--title-step--1)));
 }
 
-h2, p {max-width:650px; margin-left: auto; margin-right:auto}
+h2, p, ul {max-width:650px; margin-left: auto; margin-right:auto}
 
 h2 {
 	margin-bottom: var(--open-step-3);
@@ -43,12 +44,19 @@ figcaption {
 }
 
 section.header {
-	padding: 0;
+	padding: var(--open-step-5) 0;
+	min-height: 0;
+	gap: var(--open-step-5);
+}
+
+section.header .date {
+	margin-bottom: 0;
 }
 
 
-.title {
+h1.title {
 	text-align: center;
+	margin: 0;
 }
 
 @media all and (max-width:991px){

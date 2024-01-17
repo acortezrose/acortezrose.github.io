@@ -115,7 +115,7 @@ section.header .wording {
     align-self: center;
 }
 
-p {
+ul li, p {
     margin: 0;
     padding: 0;
     color: #181D24;
@@ -127,6 +127,10 @@ p {
 	margin-bottom: var(--step-0);
 	color: #181D24;
 	letter-spacing: calc( var(--step-0) * -.015)
+}
+
+ul li {
+    word-break: break-word;
 }
 
 p.subtitle {
@@ -288,6 +292,30 @@ img {
 
 .rounded {
 	border-radius: 20px;
+}
+
+section.header > div.chips, .chips {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+}
+
+.chip {
+    color: #004B96;
+    font-family: Open Sans;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 1rem;
+    border-radius: ;
+    background-color: #F0F5FF;
+    width: max-content;
+    font-size: var(--open-step-0);
+    letter-spacing: calc(var(--step-0) * .06);
+    line-height: 125%;
+    border-radius: 100px;
 }
 
 /* HOME HEADER LAYOUT */
