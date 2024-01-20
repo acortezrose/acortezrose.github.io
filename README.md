@@ -1,2 +1,2 @@
 # acortezrose.github.io
-reinstating my personal website for the purpose of anarchy
+My portfolio website and a growing collection of information
