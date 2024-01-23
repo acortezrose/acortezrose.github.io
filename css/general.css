@@ -610,9 +610,23 @@ section.case-study .details .wording p {
 
 
 /*----- FOOTER --------*/
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: var(--open-step-1);
+    align-items: center;
+    gap: 40px;
+}
+
+footer > * {
+    padding: 32px 40px;
+}
+
 footer div {
     display: flex;
-    padding: 32px 40px;
     justify-content: center;
     align-items: center;
     gap: var(--open-step-5);
@@ -621,8 +635,22 @@ footer div {
 
 footer a {
     font-weight: 400;
-    border-bottom: solid 2px #ffffff00;
     font-size: var(--open-step-1);
+}
+
+footer small, footer small a {
+    color: #70777D;
+    font-size: var(--open-step--1)
+}
+
+@media all and (max-width: 991px) {
+    footer {
+        flex-flow: column;
+        gap: 0px;
+    }
+    footer > * {
+        padding: 10px 40px;
+    }
 }
 
 
