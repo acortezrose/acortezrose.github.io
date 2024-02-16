@@ -249,7 +249,7 @@ nav {
     padding: 4px;
     gap: 4px;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 120px;
     margin-top: 28px;
 }
@@ -261,7 +261,7 @@ nav a {
     font-size: var(--open-step-1);
     line-height: 24px;
     font-weight: 400;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 100px;
     text-decoration: none;
     width: 100%;
@@ -445,7 +445,7 @@ section.case-study.single-col .content {
     align-items: center;
     background-color: #FAFAFF;
     border: solid 1px #DDDDFF;
-    padding: 4px 16px 4px 8px;
+    padding: 0px 16px 0px 8px;
     color: #595980;
     font-family: 'Open Sans', sans-serif;
     font-size: var(--open-step-0);
