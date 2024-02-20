@@ -72,6 +72,7 @@ body .about {
 
 section {
     max-width: 1500px;
+    margin: auto;
 }
 
 section.min-height {
@@ -251,11 +252,11 @@ nav {
     width: 100%;
     max-width: 250px;
     border-radius: 120px;
-    margin-top: 28px;
+    padding-top: 28px;
 }
 
 nav a {
-    background-color: #fff;
+    background-color: transparent;
     color: 2929ff;
     font-family: 'Open Sans', sans-serif;
     font-size: var(--open-step-1);
@@ -321,7 +322,7 @@ section.header > div.chips, .chips {
 /* HOME HEADER LAYOUT */
 
 section.header {
-    min-height: 75vh;
+    min-height: 66vh;
     display: flex;
     padding: 48px 34px 0 34px;
 }
@@ -385,7 +386,7 @@ section.header>div {
 
 /* INTRODUCTION */
 section.introduction {
-	padding: 48px 0 28px 0;
+    padding: var(--step-5) var(--open-step-4);
 	margin: 24px 34px;
 	display: grid;
 	grid-template-columns: 4fr 3fr;
@@ -473,18 +474,19 @@ section.case-study .hero {
 hr {
     width: 100%;
     margin: var(--step-2) 0 var(--step--2) 0;
-    height: 3px;
-    background-image: linear-gradient(90deg, #6767DE, #6767DE 50%, transparent 50%, transparent 100%);
-    background-size: 6px 10px;
+    height: 1px;
+    background-color: #D0D0D9;
+/*     background-image: linear-gradient(90deg, #6767DE, #6767DE 50%, transparent 50%, transparent 100%); */
+/*     background-size: 6px 10px; */
     border: none;
 }
 
 section.case-study .details {
     display: flex;
     flex-flow: column;
-    background-color: #F7F7FC;
+/*     background-color: #F7F7FC; */
     border-radius: 20px;
-    padding: var(--open-step-3) var(--open-step-4);
+    padding: var(--open-step-2) var(--open-step-4);
 }
 
 section.case-study .details .wording {
@@ -521,8 +523,8 @@ section.case-study .details .wording p {
 	section.introduction {
 		grid-template-columns: 1fr;
 		gap: var(--step--2);
-		padding: 0 34px;
-		margin: 0 0 34px;
+		padding: var(--step-5) 34px;
+		margin: 0 0 var(--open-step-1);
 	}
 
     .btn-group {
@@ -533,6 +535,7 @@ section.case-study .details .wording p {
 
     section.case-study .details {
         margin: 0 34px;
+        padding: var(--open-step-2) 0;
     }
 
     section.case-study {
@@ -594,7 +597,7 @@ section.case-study .details .wording p {
 
     section.case-study>div,
     section.introduction>div {
-        padding: 8px 16px;
+        padding: 32px 0 0 0;
         margin: 0;
     }
 
