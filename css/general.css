@@ -158,7 +158,6 @@ p a {
     font-style: normal;
     font-weight: inherit;
     border-bottom: solid 2px #181D24;
-    transition: all ease-in 150ms;
     height: calc(var(--open-step-2) + 4px);
     display: inline-block;
 }
@@ -330,7 +329,34 @@ section.case-study .details .wording p {
         margin-top: 24px;
     }
 
+    .flickity-prev-next-button {
+        display: none;
+    }
+
 }
+
+.flickity-page-dots .dot {
+        width: calc(.75 * var(--open-step--1));
+        height: calc(.75 * var(--open-step--1));
+        background: #B3B3BC;
+        transition: all 175ms ease-in;
+}
+
+.flickity-prev-next-button {
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.02), 2px 4px 4px 0px rgba(0,0,0,0.02);
+    transition: all 175ms ease-in;
+}
+
+.flickity-prev-next-button:hover {
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.04), 2px 4px 4px 0px rgba(0,0,0,0.04);
+
+}
+
+.flickity-prev-next-button svg {
+        mix-blend-mode: exclusion;
+        width: 44%;
+        left: 27%;
+    }
 
 /* ---- HORIZONTAL SCROLL ----- */
 section.scroller {
@@ -438,6 +464,7 @@ section.scroller .scroller__inner .item {
 /*----- UTILITY --------*/
 .w-full {
     width: 100%;
+    max-width: none;
 }
 
 .min-h-0 {
