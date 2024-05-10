@@ -59,6 +59,7 @@ section {
     min-height: 40vh;
     padding: var(--step-4) var(--open-step-2);
     align-content: center;
+    position: relative;
 }
 
 h1,
@@ -176,6 +177,7 @@ section.introduction {
     gap: var(--title-step-1);
     align-items: center;
     padding-top: 10em;
+    padding-bottom: 2.5em;
 }
 
 /* HEROES */
@@ -183,6 +185,14 @@ section.introduction {
 
 .gallery {
     overflow: visible;
+}
+
+section.img {
+    background-image: url('../img/underlay-wide.png');
+    background-position: center;
+    background-size: contain;
+    padding: var(--title-step-0) 0;
+
 }
 
 
