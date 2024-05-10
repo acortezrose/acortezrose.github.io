@@ -154,7 +154,7 @@ p a {
     line-height: inherit;
     font-style: normal;
     font-weight: inherit;
-    border-bottom: solid 2px #181D24;
+    border-bottom: solid 1px #8C8CA0;
     height: calc(var(--open-step-2) + 4px);
     display: inline-block;
     border-radius: 0;
