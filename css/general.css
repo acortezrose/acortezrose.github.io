@@ -300,12 +300,12 @@ section.case-study .details .wording p {
     }
 
     section.case-study .details {
-        margin: 0 34px;
-        padding: var(--open-step-2) 0;
+        padding: 0 var(--open-step-2);
     }
 
     section.case-study {
         padding: var(--title-step-0) 0 var(--title-step-0) 0;
+        gap: var(--open-step-1);
 
     }
 
