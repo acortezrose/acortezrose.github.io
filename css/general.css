@@ -103,7 +103,6 @@ p {
     font-weight: 300;
     margin-bottom: var(--step-0);
     color: #31363D;
-    letter-spacing: calc(var(--step-0) * -.01)
 }
 
 a {
@@ -111,8 +110,7 @@ a {
     font-weight: 500;
     color: #2929FF;
     text-decoration: none;
-    font-size: var(--open-step-1);
-    letter-spacing: -0.35px;
+    font-size: var(--open-step-0);
     position: relative;
     border-bottom: solid 2px #fff0;
     padding: var(--open-step--2) var(--open-step-2);
@@ -120,8 +118,10 @@ a {
     border-radius: .5em;
     box-shadow: 1px 2px 1px 0px rgba(41, 41, 255, .06),0px 1px 6px -4px rgba(41,41,255,0.8);
     transition: all 140ms ease-in;
-    letter-spacing: 0;
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
 }
+
 
 a.primary {
     color: white;
@@ -130,8 +130,9 @@ a.primary {
 
 a.icon {
     display: grid;
-    grid-template-columns: var(--open-step-2) auto;
+    grid-template-columns: var(--open-step-1) auto;
     gap: var(--open-step--1);
+    align-items: center;
     max-width: fit-content;
 }
 
@@ -220,7 +221,7 @@ section.case-study {
 .tool-item {
     display: grid;
     grid-template-columns: var(--open-step-4) auto;
-    gap: 2px;
+    gap: 4px;
     align-items: center;
     padding: 0px 20px 0px 12px;
     padding: 0 1.5em 0 .75em;
