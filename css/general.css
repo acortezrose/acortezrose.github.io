@@ -105,6 +105,12 @@ p {
     color: #31363D;
 }
 
+p.small {
+    font-size: var(--open-step--1);
+    padding: var(--step--1) 0;
+    opacity: .5;
+}
+
 a {
     display: inline-block;
     font-weight: 500;
